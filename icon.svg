@@ -1,0 +1,16 @@
+<svg width="680" height="680" viewBox="0 0 680 680" role="img" xmlns="http://www.w3.org/2000/svg">
+  <title>Rogue Coding icon</title>
+  <desc>Rogue Coding compact icon — hexagon with code brackets and RC initials</desc>
+
+  <rect width="680" height="680" rx="16" fill="#1A1A2E"/>
+
+  <g transform="translate(340,340)">
+    <polygon points="0,-200 173,-100 173,100 0,200 -173,100 -173,-100"
+             fill="#0F3460" stroke="#E94560" stroke-width="6"/>
+    <polygon points="0,-160 138,-80 138,80 0,160 -138,80 -138,-80"
+             fill="#1A1A2E"/>
+
+    <text x="0" y="-20" text-anchor="middle" font-family="Arial" font-weight="700" font-size="90" fill="#E94560">&lt;/&gt;</text>
+    <text x="0" y="70" text-anchor="middle" font-family="Arial" font-weight="700" font-size="52" fill="#C8D0E0" letter-spacing="8">RC</text>
+  </g>
+</svg>
