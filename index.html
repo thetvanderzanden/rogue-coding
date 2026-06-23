@@ -521,6 +521,23 @@
     .form-success h3 { font-size: 1.2rem; margin-bottom: 0.5rem; }
     .form-success p { color: var(--muted); font-size: 0.9rem; }
 
+    /* ── SKIP LINK ───────────────────────────────────── */
+    .skip-link {
+      position: absolute; top: -100%; left: 1rem;
+      background: var(--black); color: var(--white);
+      padding: 0.6rem 1.2rem; border-radius: var(--radius);
+      font-size: 0.85rem; font-weight: 600; text-decoration: none;
+      z-index: 9999;
+      transition: top 0.1s;
+    }
+    .skip-link:focus { top: 1rem; }
+
+    /* ── FOCUS VISIBLE ───────────────────────────────── */
+    :focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 3px;
+    }
+
     /* ── RESPONSIVE ──────────────────────────────────── */
     @media (max-width: 768px) {
       .about-grid,
@@ -536,12 +553,15 @@
 </head>
 <body>
 
+  <!-- SKIP NAV -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
   <!-- NAV -->
-  <nav>
-    <a href="#" class="nav-logo">
-      <img src="icon.svg" alt="Rogue Coding" class="icon" />
+  <nav aria-label="Main navigation">
+    <a href="#main-content" class="nav-logo" aria-label="Rogue Coding — home">
+      <img src="icon.svg" alt="" class="icon" aria-hidden="true" />
     </a>
-    <ul class="nav-links">
+    <ul class="nav-links" role="list">
       <li><a href="#about">About</a></li>
       <li><a href="#services">Services</a></li>
       <li><a href="#work">Who We Serve</a></li>
@@ -551,14 +571,17 @@
     <a href="#contact" class="nav-cta">Start a Project</a>
   </nav>
 
+  <!-- MAIN -->
+  <main id="main-content">
+
   <!-- HERO -->
-  <section class="hero">
+  <section class="hero" aria-labelledby="hero-heading">
     <p class="hero-eyebrow">AI-Powered Website Creation &mdash; Portland, Oregon</p>
     <div class="hero-wordmark">
       <img src="wordmark.svg" alt="Rogue Coding" />
     </div>
     <div class="hero-bottom">
-      <h1 class="hero-headline">Professional Websites for Small Business, <em>Delivered Fast.</em></h1>
+      <h1 class="hero-headline" id="hero-heading">Professional Websites for Small Business, <em>Delivered Fast.</em></h1>
       <div class="hero-right">
         <p class="hero-sub">Rogue Coding uses AI to turn your business plan into a live, polished website in minutes — not weeks. No agency fees, no DIY headaches. Just a great site, ready to go.</p>
         <div class="hero-actions">
@@ -570,14 +593,14 @@
   </section>
 
   <!-- ABOUT -->
-  <section id="about">
+  <section id="about" aria-labelledby="about-heading">
     <div class="about-grid">
       <div class="about-logo">
         <img src="logo.svg" alt="Rogue Coding Logo" />
       </div>
       <div class="about-text">
         <div class="section-label">The Agency</div>
-        <h2 class="section-heading">Built on AI. <em>Driven by results.</em></h2>
+        <h2 class="section-heading" id="about-heading">Built on AI. <em>Driven by results.</em></h2>
         <p>Rogue Coding is a solo-operated web design and development agency founded by Tony Vanderzanden, delivering fully customized websites to small businesses powered by a proprietary AI-driven site generation platform.</p>
         <p>Clients simply upload their logo and business plan, and a polished, live website is deployed within minutes — no lengthy back-and-forth, no agency price tag.</p>
         <p>Ongoing hosting, maintenance, and support are provided through affordable monthly retainers designed to grow with the client.</p>
@@ -586,11 +609,11 @@
   </section>
 
   <!-- SERVICES -->
-  <section id="services">
+  <section id="services" aria-labelledby="services-heading">
     <div class="services-header">
       <div>
         <div class="section-label">What We Do</div>
-        <h2 class="section-heading">Services built for <em>small business.</em></h2>
+        <h2 class="section-heading" id="services-heading">Services built for <em>small business.</em></h2>
       </div>
     </div>
     <div class="services-list">
@@ -613,9 +636,9 @@
   </section>
 
   <!-- WHO WE SERVE -->
-  <section id="work">
+  <section id="work" aria-labelledby="work-heading">
     <div class="section-label">Who We Serve</div>
-    <h2 class="section-heading" style="margin-bottom:3rem;">Built for businesses <em>ready to launch.</em></h2>
+    <h2 class="section-heading" id="work-heading" style="margin-bottom:3rem;">Built for businesses <em>ready to launch.</em></h2>
 
     <div class="work-item">
       <div class="work-image">
@@ -665,9 +688,9 @@
   </section>
 
   <!-- HOW IT WORKS -->
-  <section id="process">
+  <section id="process" aria-labelledby="process-heading">
     <div class="section-label">How It Works</div>
-    <h2 class="section-heading">From upload to <em>live site</em> in minutes.</h2>
+    <h2 class="section-heading" id="process-heading">From upload to <em>live site</em> in minutes.</h2>
     <div class="process-grid">
       <div class="process-step">
         <div class="step-num">1</div>
@@ -693,9 +716,9 @@
   </section>
 
   <!-- TEAM -->
-  <section id="team">
+  <section id="team" aria-labelledby="team-heading">
     <div class="section-label">The Team</div>
-    <h2 class="section-heading">The people <em>(and AI)</em> behind Rogue Coding.</h2>
+    <h2 class="section-heading" id="team-heading">The people <em>(and AI)</em> behind Rogue Coding.</h2>
     <div class="team-grid">
       <div class="team-card">
         <div class="team-initials">AI</div>
@@ -713,11 +736,11 @@
   </section>
 
   <!-- CONTACT -->
-  <section id="contact">
+  <section id="contact" aria-labelledby="contact-heading">
     <div class="section-label">Get in Touch</div>
     <div class="contact-grid">
       <div>
-        <h2 class="contact-heading">Want to start a new project <em>with us?</em></h2>
+        <h2 class="contact-heading" id="contact-heading">Want to start a new project <em>with us?</em></h2>
         <button class="btn btn-dark contact-cta" onclick="openModal()" style="margin-top:2rem;">Start a Project</button>
       </div>
       <div class="contact-details">
@@ -736,6 +759,8 @@
       </div>
     </div>
   </section>
+
+  </main>
 
   <!-- FOOTER -->
   <footer>
@@ -758,20 +783,20 @@
         <input type="checkbox" name="botcheck" style="display:none" />
 
         <div class="form-group">
-          <label>Your Name</label>
-          <input type="text" name="name" required placeholder="Jane Smith" />
+          <label for="field-name">Your Name</label>
+          <input type="text" id="field-name" name="name" required placeholder="Jane Smith" />
         </div>
         <div class="form-group">
-          <label>Email Address</label>
-          <input type="email" name="email" required placeholder="jane@company.com" />
+          <label for="field-email">Email Address</label>
+          <input type="email" id="field-email" name="email" required placeholder="jane@company.com" />
         </div>
         <div class="form-group">
-          <label>Business Name</label>
-          <input type="text" name="business" placeholder="Acme Co." />
+          <label for="field-business">Business Name</label>
+          <input type="text" id="field-business" name="business" placeholder="Acme Co." />
         </div>
         <div class="form-group">
-          <label>Tell us about your project</label>
-          <textarea name="message" placeholder="What does your business do? What are you looking for?"></textarea>
+          <label for="field-message">Tell us about your project</label>
+          <textarea id="field-message" name="message" placeholder="What does your business do? What are you looking for?"></textarea>
         </div>
         <button type="submit" class="form-submit">Send Message</button>
       </form>
