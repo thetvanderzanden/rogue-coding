@@ -68,7 +68,7 @@
         "url": "https://www.roguecoding.com",
         "logo": "https://www.roguecoding.com/logo.svg",
         "image": "https://www.roguecoding.com/logo.svg",
-        "email": "EMAIL@roguecoding.com",
+        "email": "websites@roguecoding.com",
         "telephone": "+1-541-000-0000",
         "address": {
           "@type": "PostalAddress",
@@ -453,8 +453,10 @@
       padding: 2rem 5%; text-align: center; font-size: 0.85rem;
     }
 
-    footer a { color: rgba(255,255,255,0.6); text-decoration: none; }
-    footer a:hover { color: var(--white); }
+    footer a { color: var(--white); text-decoration: none; }
+    footer a:hover { color: rgba(255,255,255,0.6); }
+    footer a.vztech { color: var(--color-accent); }
+    footer a.vztech:hover { color: rgba(233,69,96,0.7); }
 
     /* MODAL */
     .modal-backdrop[hidden] { display: none; }
@@ -751,10 +753,10 @@ Delivered Fast. Priced Right.</h1>
       <p class="contact-subtitle">Ready to work with Rogue Coding? Reach out and we'll get back to you promptly.</p>
 
       <div class="contact-cards">
-        <a href="mailto:EMAIL@roguecoding.com" class="contact-card">
+        <a href="mailto:websites@roguecoding.com" class="contact-card">
           <div class="contact-card-icon">✉️</div>
           <div class="contact-card-label">Email Us</div>
-          <div class="contact-card-value">EMAIL@roguecoding.com</div>
+          <div class="contact-card-value">websites@roguecoding.com</div>
         </a>
         <a href="tel:+15410000000" class="contact-card">
           <div class="contact-card-icon">📞</div>
@@ -780,13 +782,14 @@ Delivered Fast. Priced Right.</h1>
     REPLACE: year, company name, city/state, email
   -->
   <footer role="contentinfo">
-    <p>&copy; 2026 Rogue Coding &mdash; Portland, Oregon &mdash; <a href="mailto:EMAIL@roguecoding.com">EMAIL@roguecoding.com</a></p>
+    <p>&copy; 2026 Rogue Coding &mdash; Portland, Oregon &mdash; <a href="mailto:websites@roguecoding.com">websites@roguecoding.com</a></p>
+    <p style="margin-top:0.5rem; font-size:0.78rem; opacity:0.5;">A proud member of the <a class="vztech" href="https://vztechsolutions.com" target="_blank" rel="noopener">VZTech Solutions, LLC</a> family.</p>
   </footer>
 
   <!-- CONSULTATION MODAL
     REPLACE:
       - YOUR_WEB3FORMS_KEY  → get free key at web3forms.com (enter destination email)
-      - EMAIL@roguecoding.com in the error fallback link
+      - websites@roguecoding.com in the error fallback link
     The honeypot field (botcheck) handles spam filtering on the free tier.
   -->
   <div id="modal-backdrop" class="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="modal-title" hidden>
@@ -845,7 +848,7 @@ Delivered Fast. Priced Right.</h1>
       <div id="error-view" class="form-state error">
         <div class="form-state-icon">⚠️</div>
         <h3>Something went wrong</h3>
-        <p>Please try again or email us directly at <a href="mailto:EMAIL@roguecoding.com">EMAIL@roguecoding.com</a>.</p>
+        <p>Please try again or email us directly at <a href="mailto:websites@roguecoding.com">websites@roguecoding.com</a>.</p>
       </div>
     </div>
   </div>
