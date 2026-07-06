@@ -791,12 +791,16 @@
           <input type="email" id="field-email" name="email" required placeholder="jane@company.com" />
         </div>
         <div class="form-group">
+          <label for="field-phone">Phone Number</label>
+          <input type="tel" id="field-phone" name="phone" required placeholder="(503) 555-0100" />
+        </div>
+        <div class="form-group">
           <label for="field-business">Business Name</label>
-          <input type="text" id="field-business" name="business" placeholder="Acme Co." />
+          <input type="text" id="field-business" name="business" required placeholder="Acme Co." />
         </div>
         <div class="form-group">
           <label for="field-message">Tell us about your project</label>
-          <textarea id="field-message" name="message" placeholder="What does your business do? What are you looking for?"></textarea>
+          <textarea id="field-message" name="message" required placeholder="What does your business do? What are you looking for?"></textarea>
         </div>
         <button type="submit" class="form-submit">Send Message</button>
       </form>
